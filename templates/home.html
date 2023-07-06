@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<!-- Заголовок -->
+<div class="container_main_page">
+    <h1 class="title_text" style="text-align: center;">Обработка</h1>
+</div>
+
+<!-- Блок с 2 фото -->
+    <div class="photo-block">
+        <img class="photo" src={{before}} alt="First photo">
+        <img class="photo" src={{after}} alt="Second photo">
+    </div>
+
+    <!-- Кнопка загрузки фото -->
+<section>
+    <!— Кнопки: загрузка фото, подтвердить, скачать —>
+    <div class="cont_for_btn">
+        <form method="POST" enctype="multipart/form-data" class="form">
+            <div class="fileuploader">
+                <label class="input-file">
+                    <input type="file" name="file" accept=".jpg, .png" class="btn">
+                    <span>Select file</span>
+                </label>
+                <input type="submit" class="btn" value="Submit"/>
+                <a href="static/images/after.png" download="" class="downl btn">Download</a>
+            </div>
+        </form>
+
+    </div>
+<!— Конец кнопкок —>
+</section>
+
+<!— Функционал кнопки —>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+$('.input-file input[type=file]').on('change', function(){
+let file = this.files[0];
+$(this).next().html();
+});
+</script>
+<!— Конец функционала кнопки —>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/upload.css') }}">
+    <title> Грустно и точка. </title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="main-container">
+        <header class="headers">
+            <div class="menu_wrapper">
+                <ul class="header_list">
+                    <li><a class="header_item" href="{{url_for('index')}}">Главная</a></li>
+                    <li class="header_item"><a class="header_text" href="{{url_for('info')}}">Информация<a/></li>
+                    <li class="header_item"><a class="header_text" href="{{url_for('profile')}}">Профиль<a/></li>
+                </ul>
+            </div>
+        </header>
+
+                {% block body %}{% endblock %}
+    </div>
+</body>
+
+</html>

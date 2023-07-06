@@ -1,0 +1,169 @@
+body {
+    margin: 0px;
+    font-family: 'Space Grotesk', sans-serif;
+    background: linear-gradient(to bottom right, #cc7722, rgb(71, 101, 141) 80%, rgb(51, 59, 70));
+    height: 100vh;
+}
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+
+.main-container {
+    margin-top: 40px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+header {
+    width: 100%;
+    height: 45px;
+    background-color: rgb(34, 37, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+.menu_wrapper a{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: rgb(246	195	68);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+
+.menu_wrapper_el {
+    text-align: center;
+    display: inline-block;
+    padding: 0 30px;
+}
+
+
+/* Дизайн кнопки */
+.cont_for_btn {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    border-radius: 30px;
+}
+
+.btn, .input-file span {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    color: rgb(246	195	68);
+    background: rgb(34, 37, 41);
+    border-radius: 7px;
+    padding: 8px 22px;
+    transition: background-color 0.2s;
+    font-size: 18px;
+    line-height: 14px;
+    margin: 0px 15px;
+    border: none;
+}
+
+.input-file input[type=file] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+}
+   
+/* Hover/active */
+.btn:hover, .input-file:hover span {
+    background-color: #546077c4;
+}
+.btn:active, .input-file:active span {
+    background-color: #546077c4;
+}
+   
+/* Disabled */
+.input-file input[type=file]:disabled + span {
+    background-color: #eee;
+}
+/* Конец дизайна кнопки */
+
+
+/* Дизайн блока с фото */
+.photo-block {
+    max-width: 800px;
+    max-height: 450px;
+    width: 80%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px auto;
+}
+
+.photo {
+    /* width: 50%;
+    height: auto; */
+    width: auto;
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 5px solid rgb(34, 37, 41);
+    border-radius: 10px;
+    margin: 0 30px;
+    box-shadow: 8px 8px 5px #444;
+}
+/* Конец дизайна блока с фото */
+
+
+/* Страницы авторизации и регистрации */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+  
+#login-form, #register-form {
+    display: inline-block;
+    width: 45%;
+    text-align: left;
+    padding: 20px;
+    border: 2px solid rgb(241, 238, 238);
+    border-radius: 10px;
+    margin: 20px;
+}
+  
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+  
+.login-button {
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.login-button:active, /* активная/посещенная ссылка */
+.login-button:hover,  /* при наведении */
+
+/* Конец блока страниц авторизации и регистрации */
